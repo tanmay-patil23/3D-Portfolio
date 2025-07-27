@@ -1871,3 +1871,248 @@ section {
     box-shadow:none;
   }
 }
+
+/* ════════════════════════════════════════════════════════════════════════════════════════ */
+/*  HERO SECTION MOBILE RESPONSIVENESS FIX                                                  */
+/* ════════════════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 480px) {
+  
+  /* ──────── HERO CONTAINER FIXES ──────── */
+  .hero-section {
+    min-height: 100vh !important;
+    padding: 80px 15px 40px 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  /* ──────── HERO CONTENT LAYOUT ──────── */
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 1.5rem !important;
+    z-index: 10 !important;
+    position: relative !important;
+  }
+
+  /* ──────── HERO TEXT SCALING ──────── */
+  .hero-title {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5rem ! 700 !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1rem !important;
+    opacity: 0.9 !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+  }
+
+  .hero-description {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
+    max-width: 90% !important;
+    opacity: 0.8 !important;
+  }
+
+  /* ──────── HERO BUTTONS ──────── */
+  .hero-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    align-items: center !important;
+  }
+
+  .btn-neon,
+  .btn-outline {
+    width: 100% !important;
+    padding: 12px 20px !important;
+    font-size: 0.9rem !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    min-height: 44px !important; /* Touch-friendly minimum */
+  }
+
+  /* ──────── 3D BLOB CONTAINER FIXES ──────── */
+  .blob-container {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
+    height: 250px !important;
+    max-width: 320px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .blob-3d {
+    width: 200px !important;
+    height: 200px !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 0.6 !important;
+  }
+
+  /* ──────── AVATAR/IMAGE FIXES ──────── */
+  .hero-avatar,
+  .avatar-container {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 1rem auto !important;
+    border-radius: 50% !important;
+    z-index: 15 !important;
+    position: relative !important;
+  }
+
+  .avatar-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+  }
+
+  /* ──────── TYPING ANIMATION FIXES ──────── */
+  .typing-text,
+  .glitch-text {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+  }
+
+  /* ──────── PARTICLE BACKGROUND OPTIMIZATION ──────── */
+  .particles-bg,
+  .particle-container {
+    opacity: 0.3 !important;
+    z-index: 0 !important;
+  }
+
+  /* ──────── SOCIAL LINKS IN HERO ──────── */
+  .hero-social-links {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .social-link {
+    font-size: 1.2rem !important;
+    padding: 8px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+}
+
+/* ──────── EXTRA SMALL SCREENS (iPhone SE, etc.) ──────── */
+@media (max-width: 375px) {
+  
+  .hero-title {
+    font-size: 1.6rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem !important;
+  }
+  
+  .hero-description {
+    font-size: 0.85rem !important;
+    max-width: 95% !important;
+  }
+
+  .blob-container {
+    height: 200px !important;
+    max-width: 280px !important;
+  }
+
+  .blob-3d {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .hero-avatar,
+  .avatar-container {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+}
+
+/* ──────── LANDSCAPE ORIENTATION FIX ──────── */
+@media (max-width: 812px) and (orientation: landscape) and (max-height: 500px) {
+  
+  .hero-section {
+    min-height: 100vh !important;
+    padding: 20px 15px !important;
+  }
+
+  .hero-content {
+    gap: 1rem !important;
+  }
+
+  .hero-title {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-description {
+    font-size: 0.8rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .blob-container {
+    height: 150px !important;
+  }
+
+  .blob-3d {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+}
+
+/* ──────── PREVENT HORIZONTAL SCROLL IN HERO ──────── */
+@media (max-width: 480px) {
+  
+  .hero-section * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix any fixed-width elements that might cause overflow */
+  .hero-section [style*="width:"] {
+    width: 100% !important;
+  }
+
+  /* Ensure no elements stick out */
+  .hero-section {
+    overflow-x: hidden !important;
+  }
+
+}
