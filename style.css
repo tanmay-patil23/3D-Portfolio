@@ -1687,3 +1687,187 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ────────────────────────────────────────────── */
+/*  1.  GLOBAL GUARDS & RESETS                   */
+/*      – stop sideways scrolling                */
+/*      – make every box obey the viewport       */
+/* ────────────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* lock body width and remove ghost gutters */
+  html,body{
+    max-width:100%;
+    overflow-x:hidden;
+    -webkit-text-size-adjust:100%;
+    overscroll-behavior-x:contain;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box }
+
+  /* make every image/table/video shrink inside the screen  */
+  img,svg,video,canvas,iframe,table{ 
+    max-width:100%;
+    height:auto;
+  }
+
+  /* stop fixed-width elements producing a horizontal bar   */
+  [style*="width:600px"],
+  [style*="width:500px"],
+  [style*="min-width:600px"],
+  [style*="min-width:500px"]{
+    width:100% !important;
+    min-width:0 !important;
+  }
+}
+
+/* ────────────────────────────────────────────── */
+/*  2.  NAVIGATION                               */
+/*      – hide long link row & let logo wrap     */
+/* ────────────────────────────────────────────── */
+@media (max-width: 480px){
+
+  .nav-links{ display:none }
+  .logo-text{ font-size:1.25rem }
+
+  /* simple burger (tap scrolls down to #contact) */
+  .burger{
+    display:block;
+    position:absolute; 
+    right:1rem;top:1rem;
+    width:32px;height:24px;cursor:pointer;
+  }
+  .burger,
+  .burger::before,
+  .burger::after{
+    background:var(--neon-blue);
+    border-radius:2px;
+    transition:all .3s ease;
+    content:'';
+  }
+  .burger::before{ 
+    position:absolute; width:100%;height:4px; top:-9px; left:0;
+  }
+  .burger::after{  
+    position:absolute; width:100%;height:4px; top:9px; left:0;
+  }
+}
+
+/* ────────────────────────────────────────────── */
+/*  3.  HERO BANNER                              */
+/*      – stack columns vertically               */
+/*      – curb huge blob size / fonts            */
+/* ────────────────────────────────────────────── */
+@media (max-width: 480px){
+
+  .hero-section{ padding-top:6rem }          /* avoid overlap with nav */
+  .hero-content{ 
+    grid-template-columns:1fr; 
+    text-align:center; 
+    gap:1.5rem; 
+  }
+
+  .hero-title      { font-size:1.9rem; line-height:1.25 }
+  .hero-subtitle   { font-size:1.05rem }
+  .hero-description{ font-size:0.95rem }
+
+  .blob-container  { height:280px }
+  .blob-3d         { width:240px; height:240px }
+}
+
+/* ────────────────────────────────────────────── */
+/*  4.  TIMELINE (experience)                    */
+/*      – turn the split layout into one column  */
+/* ────────────────────────────────────────────── */
+@media (max-width: 480px){
+
+  .timeline{
+    padding-left:1.25rem;   /* room for markers */
+  }
+  .timeline::before{
+    left:.5rem;             /* move centre line */
+  }
+  .timeline-item,
+  .timeline-item:nth-child(even),
+  .timeline-item:nth-child(odd){
+    left:0 !important;
+    width:100%;             /* full-width cards */
+    padding-left:2.25rem;   /* room for marker */
+  }
+  .timeline-marker{
+    left: -1.25rem !important;
+  }
+}
+
+/* ────────────────────────────────────────────── */
+/*  5.  GRIDS → SINGLE COLUMN                    */
+/* ────────────────────────────────────────────── */
+@media (max-width: 480px){
+
+  .projects-grid,
+  .skills-grid,
+  .certificates-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* tighten gaps so long pages feel lighter */
+  .projects-grid    { gap:1.25rem }
+  .skills-grid      { gap:1.5rem }
+  .certificates-grid{ gap:1.25rem }
+
+  /* cards: softer shadow + edge-to-edge radius */
+  .project-card,
+  .skill-category,
+  .certificate-card{
+    border-radius:10px;
+    box-shadow:0 4px 18px rgba(0,0,0,.25);
+  }
+}
+
+/* ────────────────────────────────────────────── */
+/*  6.  CONTACT                                  */
+/*      – one column & centred buttons           */
+/* ────────────────────────────────────────────── */
+@media (max-width: 480px){
+
+  .contact-grid{ grid-template-columns:1fr }
+
+  .social-links{ 
+    justify-content:center; 
+    flex-wrap:wrap;
+  }
+  .social-link{
+    margin-bottom:.5rem;
+    min-width:120px;
+    text-align:center;
+  }
+}
+
+/* ────────────────────────────────────────────── */
+/*  7.  TYPOGRAPHY SCALE                         */
+/*      – a gentle mobile baseline for long text */
+/* ────────────────────────────────────────────── */
+@media (max-width: 480px){
+  :root{
+    --font-size-base : 15px;
+    --font-size-lg   : 16px;
+    --font-size-xl   : 18px;
+    --font-size-2xl  : 20px;
+  }
+}
+
+/* ────────────────────────────────────────────── */
+/*  8.  FINAL SAFETY: REMOVE STUCK :hover EFFECT */
+/*      – avoids “sticky” hover on iOS, etc.     */
+/* ────────────────────────────────────────────── */
+@media (hover:none){
+  a:hover,
+  .btn-neon:hover,
+  .project-card:hover,
+  .certificate-card:hover{
+    transform:none;
+    box-shadow:none;
+  }
+}
