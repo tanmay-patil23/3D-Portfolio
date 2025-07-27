@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanmay Patil - Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-glass">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Tanmay Patil</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="particles-bg"></div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typing-text">Tanmay Patil</span>
+                        <span class="cursor">|</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Software Engineer | QA Specialist | Frontend Enthusiast</h2>
+                    <p class="hero-description">Code. Test. Iterate. Repeat — powered by curiosity</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-card glass">
+                            <span class="stat-number"><1</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-card glass">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-card glass">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <!-- <button class="btn-neon primary">View My Work</button>
+                        <button class="btn-neon secondary">Get In Touch</button> -->
+                        <a href="#projects" class="btn-neon primary">View My Work</a>
+                        <a href="#contact" class="btn-neon secondary">Get In Touch</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="blob-container">
+                    <div class="blob-3d"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title glow">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card glass">
+                    <div class="about-avatar">
+                        <img src="assets/WhatsApp Image.jpeg" alt="Abhay Sharma" class="avatar-img" />
+                        <!-- <div class="avatar-placeholder"></div> -->
+                    </div>
+                    <p class="about-text">I'm a passionate developer who combines technical expertise with creative vision to build exceptional digital experiences.</p>
+                    <div class="about-location">
+                        <span class="location-icon">📍</span>
+                        <span>Willing to Relocate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title glow">Featured Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="ai">Full Stack</button>
+                <button class="filter-btn" data-filter="mobile">QA</button>
+            </div>
+            
+                <div class="projects-grid">
+                <div class="project-card glass" data-category="web">
+                    <div class="project-image">
+                        <div class="placeholder-image">🌐</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">3D Portfolio Website</h3>
+                        <p class="project-description">Interactive portfolio with Three.js animations</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://demo1.com" target="_blank" class="project-link">Live Demo</a>
+                            <a href="https://github.com/user/project1" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass" data-category="ai">
+                    <div class="project-image">
+                        <div class="placeholder-image">🤖</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">TrendLens AI</h3>
+                        <p class="project-description">Full-Stack AI-Powered Trend Analysis Tool</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">FastAPI</span>
+                             <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://demo2.com" target="_blank" class="project-link">Live Demo</a>
+                            <a href="https://github.com/tanmay-patil23/trendlens-ai-full-stack" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card glass" data-category="mobile">
+                    <div class="project-image">
+                        <div class="placeholder-image">🛠️</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Booking.com - Enterprise-Grade Manual Testing Framework</h3>
+                        <p class="project-description">Testing Areas: Payment Gateways, API Security, Cross-Browser compatibility</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Functional Testing</span>
+                            <span class="tech-tag">Penetration Testing</span>
+                            <span class="tech-tag">Accessibility Testing</span>
+                             <span class="tech-tag">Exploratory Testing</span>
+                            <span class="tech-tag">Cross-Browser & Cross-Platform Testing</span>
+                            <span class="tech-tag">Test Data Management</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://demo3.com" target="_blank" class="project-link">Live Demo</a>
+                            <a href="https://github.com/tanmay-patil23/booking.com-manual-testing-portfolio" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title glow">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item glass">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Front-End Developer</h3>
+                        <h4 class="timeline-company">Rigel Infotech Ltd</h4>
+                        <span class="timeline-duration">Oct 2020 - Nov 2020</span>
+                        <p class="timeline-description">Involved in the development of cutting-edge web applications and user interfaces</p>
+                        <div class="timeline-achievements">
+                            <span class="achievement">Increased performance by 40%</span>
+                            <span class="achievement">Improved user engagement by 60%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item glass">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Software Tester</h3>
+                        <h4 class="timeline-company">Vervali Systems Pvt Ltd</h4>
+                        <span class="timeline-duration"> May 2019 - June 2019</span>
+                        <p class="timeline-description">Collaborated with cross-functional teams to analyze test results, achieving a 10% improvement in testing efficiency.</p>
+                        <div class="timeline-achievements">
+                            <span class="achievement">Executed over 50 manual test cases</span>
+                            <span class="achievement">Conducted User Acceptance Testing (UAT)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title glow">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="95"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="95"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="95"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">.Net</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category glass">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C/C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category glass">
+                    <h3 class="category-title">Testing</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Manual Testing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Selenium</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Defect Tracking</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">UAT</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Test Documentation</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass">
+                    <h3 class="category-title">Tools</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Jira</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Slack</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates-section">
+        <div class="container">
+            <h2 class="section-title glow">Certificates & Achievements</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card glass">
+                    <div class="certificate-icon">🤖</div>
+                    <h3 class="certificate-name">Prompt Engineering</h3>
+                    <p class="certificate-issuer">MTF Institute of Management, Technology and Finance</p>
+                    <span class="certificate-date">2024</span>
+                    <a href="https://verify.aws.com" target="_blank" class="certificate-verify">Verify</a>
+                </div>
+
+                 <div class="certificate-card glass">
+                    <div class="certificate-icon">💻</div>
+                    <h3 class="certificate-name">Front-End Development</h3>
+                    <p class="certificate-issuer">Udemy</p>
+                    <span class="certificate-date">2023</span>
+                    <a href="https://verify.aws.com" target="_blank" class="certificate-verify">Verify</a>
+                </div>
+
+                 <div class="certificate-card glass">
+                    <div class="certificate-icon">📗</div>
+                    <h3 class="certificate-name">Advanced Excel</h3>
+                    <p class="certificate-issuer">Udemy</p>
+                    <span class="certificate-date">2023</span>
+                    <a href="https://drive.google.com/file/d/136VYaP8vKtiaJkZv3Ev5eWUWVM8R6H8L/view?usp=sharing" target="_blank" class="certificate-verify">Verify</a>
+                </div>
+
+                 <div class="certificate-card glass">
+                    <div class="certificate-icon">🐍</div>
+                    <h3 class="certificate-name">Python Programming</h3>
+                    <p class="certificate-issuer">IBM</p>
+                    <span class="certificate-date">2022</span>
+                    <a href="https://drive.google.com/file/d/1cQhLo4yipxeJcEbaAz8xVG9tndF6tkr6/view?usp=sharing" target="_blank" class="certificate-verify">Verify</a>
+                </div>
+
+                 <div class="certificate-card glass">
+                    <div class="certificate-icon">📊</div>
+                    <h3 class="certificate-name">Power BI - Data Analytics Essentials</h3>
+                    <p class="certificate-issuer">Udemy</p>
+                    <span class="certificate-date">2024</span>
+                    <a href="https://drive.google.com/file/d/1rtCIgDd9opuPfR78o6IMYmIHKlzMDb_N/view?usp=sharing" target="_blank" class="certificate-verify">Verify</a>
+                </div>
+
+                 <div class="certificate-card glass">
+                    <div class="certificate-icon">🛠️</div>
+                    <h3 class="certificate-name">Software Testing</h3>
+                    <p class="certificate-issuer">Tech Ustaads</p>
+                    <span class="certificate-date">2019</span>
+                    <a href="https://drive.google.com/file/d/1CFLtoCHxJ5jEBZVKHjUE1DQ76J3n7U-X/view?usp=sharing" target="_blank" class="certificate-verify">Verify</a>
+                </div>
+                                
+                <div class="certificate-card glass">
+                    <div class="certificate-icon">🛢️</div>
+                    <h3 class="certificate-name">SQL and Relational Databases</h3>
+                    <p class="certificate-issuer">IBM</p>
+                    <span class="certificate-date">2022</span>
+                    <a href="https://drive.google.com/file/d/1KtoKSB_LNjDWftqodqa-j7quHH4KYsXf/view?usp=sharing" target="_blank" class="certificate-verify">Verify</a>
+                </div>
+                
+                <div class="certificate-card glass">
+                    <div class="certificate-icon">☁️</div>
+                    <h3 class="certificate-name">AWS Innovate Online Conference</h3>
+                    <p class="certificate-issuer">Amazon Web Services</p>
+                    <span class="certificate-date">2022</span>
+                    <a href="https://drive.google.com/file/d/1h_YRxZ6vdCn2uZiMvvBHDQLug9LeqxSZ/view?usp=sharing" target="_blank" class="certificate-verify">Verify</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title glow">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info glass">
+                    <h3>Let's Create Something Amazing</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>patiltanmay00@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+91 7558628310</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/tanmay-patil23/" target="_blank" class="social-link">GitHub</a>
+                        <a href="https://www.linkedin.com/in/tanmay-patil-b23164162/" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://twitter.com/Tsunadee_106" target="_blank" class="social-link">Twitter</a>
+                        <a href="https://instagram.com/tanmay5446" target="_blank" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                
+                <form class="contact-form glass">
+                    <input type="text" placeholder="Your Name" class="form-input">
+                    <input type="email" placeholder="Your Email" class="form-input">
+                    <textarea placeholder="Your Message" rows="5" class="form-input"></textarea>
+                    <button type="submit" class="btn-neon primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
