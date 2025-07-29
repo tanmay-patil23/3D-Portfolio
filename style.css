@@ -1220,6 +1220,12 @@ section {
 }
 
 /* Projects Section */
+.projects-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .project-filters {
   display: flex;
   justify-content: center;
@@ -1248,15 +1254,22 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
+
 }
 
 .project-card {
-  padding: 0;
+  /* padding: 0;
   overflow: hidden;
   transition: all var(--duration-normal) var(--ease-out-cubic);
-  cursor: pointer;
+  cursor: pointer; */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
 }
 
 .project-card:hover {
@@ -2116,3 +2129,118 @@ section {
   }
 
 }
+
+/* .footer {
+    width: 100%;
+    background: rgba(22, 24, 35, 0.88);
+    color: #fff;
+    padding: 24px 0 18px 0;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1.5px solid rgba(180,180,255,0.08);
+    letter-spacing: 0.01em;
+    box-shadow: 0 -2px 12px 0 rgba(0,0,0,0.18);
+}
+@media (max-width:600px){
+  .footer {font-size:0.95rem; padding:18px 0 12px 0;}
+} */
+
+/* ════════════════════════════════════════════════════════ */
+/* PROJECTS GRID: TRUE RESPONSIVE WRAPPING FOR ALL COUNTS  */
+/* ════════════════════════════════════════════════════════ */
+
+/* ────────────────────────────────────────────────
+   PROJECTS GRID — FINAL CANONICAL RULE-SET
+   ──────────────────────────────────────────────── */
+/* ╔═══════════════════════════════════════════════╗
+   ║  FOOTER · Neon-Depth 3-D Animation            ║
+   ╚═══════════════════════════════════════════════╝ */
+
+.footer.neon-depth{
+  position:relative;
+  width:100%;
+  background:rgba(22,24,35,0.88);
+  color:#fff;
+  padding:32px 0 24px;
+  margin-top:2rem;
+  text-align:center;
+  font-size:1rem;
+  border-top:1.5px solid rgba(180,180,255,0.08);
+  overflow:hidden;                 /* contain pseudo-3-D layers   */
+  perspective:800px;               /* enable depth for children   */
+  transform-style:preserve-3d;
+  /* gentle upward parallax so the footer "leans" into the page   */
+  transform:translateZ(20px) rotateX(2deg);
+}
+
+/* ——— Responsive font tweak ——— */
+@media (max-width:600px){
+  .footer.neon-depth{font-size:0.95rem;padding:24px 0 18px;}
+}
+
+/* ═════ 3-D GLOW HALO ═════ */
+.footer-glow{
+  position:absolute;inset:-50% -50%;
+  background:conic-gradient(from 90deg,
+    rgba(0,255,255,0.0) 0deg,
+    rgba(0,255,255,0.45) 90deg,
+    rgba(255,0,110,0.35) 180deg,
+    rgba(131,56,236,0.4) 270deg,
+    rgba(0,255,255,0.0) 360deg);
+  filter:blur(140px);
+  animation:rotateGlow 16s linear infinite;
+  pointer-events:none;transform:translateZ(-40px);
+}
+
+/* ═════ MOVING LIGHT SWEEP ═════ */
+.footer-sweep{
+  position:absolute;top:0;left:-15%;
+  width:30%;height:100%;
+  background:linear-gradient(120deg,
+              transparent 0%,rgba(255,255,255,0.55) 45%,
+              rgba(0,255,255,0.55) 50%,
+              rgba(255,0,110,0.55) 55%,transparent 100%);
+  opacity:0;pointer-events:none;
+  transform:skewX(-20deg) translateZ(-20px);
+  animation:footSweep 8s ease-in-out infinite;
+}
+
+/* ═════ TEXT SHIMMER ON HOVER ═════ */
+.footer.neon-depth p{
+  display:inline-block;
+  background:linear-gradient(90deg,
+              #00d4ff 0%,#ff006e 33%,#8338ec 66%,#00d4ff 100%);
+  background-size:300%;-webkit-background-clip:text;
+  color:transparent;transition:background-position 1s ease-out;
+}
+.footer.neon-depth:hover p{
+  background-position:100% 0;
+}
+
+/* ═════ ICON / LINK HOVER DEPTH ═════ */
+.footer.neon-depth a{
+  color:#fff;transition:transform .3s ease,color .3s ease;
+  will-change:transform;
+}
+.footer.neon-depth a:hover{
+  color:#00d4ff;transform:translateZ(6px);
+}
+
+/* ═════ KEYFRAMES ═════ */
+@keyframes rotateGlow{
+  from{transform:translateZ(-40px) rotate(0deg);}
+  to  {transform:translateZ(-40px) rotate(360deg);}
+}
+@keyframes footSweep{
+  0%, 15%  {opacity:0;transform:skewX(-20deg) translateX(-130%) translateZ(-20px);}
+  20%,40%  {opacity:1;}
+  60%,100% {opacity:0;transform:skewX(-20deg) translateX(130%) translateZ(-20px);}
+}
+
+/* ═════ REDUCED-MOTION PREFERENCE ═════ */
+@media (prefers-reduced-motion:reduce){
+  .footer-glow,.footer-sweep{animation:none;}
+  .footer.neon-depth{transform:none;perspective:none;}
+}
+
